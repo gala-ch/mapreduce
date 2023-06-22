@@ -1,0 +1,1 @@
+select category, count(sales) from table where len(data)>=6 group by 1
