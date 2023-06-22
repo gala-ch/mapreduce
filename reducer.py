@@ -40,13 +40,15 @@ for line in sys.stdin:
     # This means the line starts with a new key (key changes e.g. from "Visa" to "Cash")
     # Remember that our keys are sorted
     if previous_key != None and previous_key != key:
-        # Then write the result of the old key (Key=category, Value= Sum of Sales)
-        # to the standart output (stdout)
-        # Key and value are seperated by a tab (\t)
-        # Line ends with new line (\n)
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, purchase_count))
+
+        if purchase_count > 114:
+        	# Then write the result of the old key (Key=category, Value= Sum of Sales)
+        	# to the standart output (stdout)
+        	# Key and value are seperated by a tab (\t)
+        	# Line ends with new line (\n)
+        	sys.stdout.write("{0}\t{1}\n".format(previous_key, purchase_count))
         # Sum of sales starts again with 0
-        sum_of_values = 0
+        purchase_count = 0
 
     # Increment the count
     purchase_count += 1

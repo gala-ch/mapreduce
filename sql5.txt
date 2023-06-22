@@ -1,0 +1,1 @@
+select category, count(sales) from table where category in ('Computers','Cameras','Video Games') group by 1 having count(sales)>114
