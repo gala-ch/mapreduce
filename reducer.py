@@ -7,7 +7,6 @@ import sys
 # Each key value pair will be in a new line
 # The key and the value are seperated by a tab (\t)
 # The key is the payment type and the value is the sales
-
 # Example input data (Key=Payment, Value=Sales)
 # Input is ordered by the key
 # Visa  205.96
@@ -20,7 +19,7 @@ import sys
 # Cash  455.51
 
 # Sum of all sales (values) is initialized with zero, we just started
-sum_of_values = 0
+purchase_count = 0
 
 # Previous key is initialized with None, we just started
 previous_key = None
@@ -45,17 +44,14 @@ for line in sys.stdin:
         # to the standart output (stdout)
         # Key and value are seperated by a tab (\t)
         # Line ends with new line (\n)
-        sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values))
+        sys.stdout.write("{0}\t{1}\n".format(previous_key, purchase_count))
         # Sum of sales starts again with 0
         sum_of_values = 0
 
-    # Add the value to the total sales
-    # a += b is the same as a = a + b
-    # the float function transforms the value
-    # to a float data type (like decimal)
-    sum_of_values += float(value)
+    # Increment the count
+    purchase_count += 1
     # the previous key for the next iteration is the current key of the this iteration 
     previous_key = key
 
 # write the last result to stdout
-sys.stdout.write("{0}\t{1}\n".format(previous_key, sum_of_values))
+sys.stdout.write("{0}\t{1}\n".format(previous_key, purchase_count))

@@ -1,0 +1,18 @@
+Baby	103
+Books	213
+CDs	331
+Cameras	445
+Children's Clothing	564
+Computers	681
+Consumer Electronics	783
+Crafts	892
+DVDs	1009
+Garden	1122
+Health and Beauty	1223
+Men's Clothing	1338
+Music	1457
+Pet Supplies	1565
+Sporting Goods	1669
+Toys	1786
+Video Games	1901
+Women's Clothing	2000

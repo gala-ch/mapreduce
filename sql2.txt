@@ -1,0 +1,1 @@
+select category, count(sales) from table group by 1
