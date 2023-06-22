@@ -1,0 +1,3 @@
+Cameras	238.843947368
+Computers	242.142051282
+Video Games	259.281478261

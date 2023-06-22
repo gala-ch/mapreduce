@@ -1,0 +1,1 @@
+select category, avg(sales) from table where category in ('Cameras', 'Computers', 'Video Games') group by 1
